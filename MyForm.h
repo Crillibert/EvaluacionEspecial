@@ -28,14 +28,15 @@ namespace EvaluacionEspecial {
 
 	public:
 		listaDoble^ numero2 = gcnew listaDoble;
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
+
 	public:
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown3;
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown4;
+
+
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::NumericUpDown^ numericUpDownB;
 	private: System::Windows::Forms::NumericUpDown^ numericUpDownA;
+	private: System::Windows::Forms::Label^ label2;
 		   listaDoble^ numero3 = gcnew listaDoble;
 	protected:
 		/// <summary>
@@ -90,17 +91,10 @@ namespace EvaluacionEspecial {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox_num1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_num2 = (gcnew System::Windows::Forms::TextBox());
-			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->numericUpDown3 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->numericUpDown4 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->numericUpDownB = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDownA = (gcnew System::Windows::Forms::NumericUpDown());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownB))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownA))->BeginInit();
 			this->SuspendLayout();
@@ -138,45 +132,9 @@ namespace EvaluacionEspecial {
 			this->textBox_num2->Size = System::Drawing::Size(220, 20);
 			this->textBox_num2->TabIndex = 11;
 			// 
-			// numericUpDown1
-			// 
-			this->numericUpDown1->Enabled = false;
-			this->numericUpDown1->Location = System::Drawing::Point(327, 175);
-			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 999, 0, 0, 0 });
-			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(120, 20);
-			this->numericUpDown1->TabIndex = 12;
-			// 
-			// numericUpDown2
-			// 
-			this->numericUpDown2->Enabled = false;
-			this->numericUpDown2->Location = System::Drawing::Point(453, 175);
-			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 999, 0, 0, 0 });
-			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(120, 20);
-			this->numericUpDown2->TabIndex = 13;
-			// 
-			// numericUpDown3
-			// 
-			this->numericUpDown3->Enabled = false;
-			this->numericUpDown3->Location = System::Drawing::Point(327, 201);
-			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 999, 0, 0, 0 });
-			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(120, 20);
-			this->numericUpDown3->TabIndex = 14;
-			// 
-			// numericUpDown4
-			// 
-			this->numericUpDown4->Enabled = false;
-			this->numericUpDown4->Location = System::Drawing::Point(453, 201);
-			this->numericUpDown4->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 999, 0, 0, 0 });
-			this->numericUpDown4->Name = L"numericUpDown4";
-			this->numericUpDown4->Size = System::Drawing::Size(120, 20);
-			this->numericUpDown4->TabIndex = 15;
-			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(12, 227);
+			this->button2->Location = System::Drawing::Point(128, 226);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 16;
@@ -186,8 +144,7 @@ namespace EvaluacionEspecial {
 			// 
 			// numericUpDownB
 			// 
-			this->numericUpDownB->Enabled = false;
-			this->numericUpDownB->Location = System::Drawing::Point(2, 201);
+			this->numericUpDownB->Location = System::Drawing::Point(118, 200);
 			this->numericUpDownB->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 999, 0, 0, 0 });
 			this->numericUpDownB->Name = L"numericUpDownB";
 			this->numericUpDownB->Size = System::Drawing::Size(120, 20);
@@ -195,35 +152,36 @@ namespace EvaluacionEspecial {
 			// 
 			// numericUpDownA
 			// 
-			this->numericUpDownA->Enabled = false;
-			this->numericUpDownA->Location = System::Drawing::Point(2, 175);
+			this->numericUpDownA->Location = System::Drawing::Point(118, 174);
 			this->numericUpDownA->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 999, 0, 0, 0 });
 			this->numericUpDownA->Name = L"numericUpDownA";
 			this->numericUpDownA->Size = System::Drawing::Size(120, 20);
 			this->numericUpDownA->TabIndex = 17;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(341, 201);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(61, 13);
+			this->label2->TabIndex = 19;
+			this->label2->Text = L"Resultado: ";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(585, 261);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->numericUpDownB);
 			this->Controls->Add(this->numericUpDownA);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->numericUpDown4);
-			this->Controls->Add(this->numericUpDown3);
-			this->Controls->Add(this->numericUpDown2);
-			this->Controls->Add(this->numericUpDown1);
 			this->Controls->Add(this->textBox_num2);
 			this->Controls->Add(this->textBox_num1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownB))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownA))->EndInit();
 			this->ResumeLayout(false);
@@ -279,7 +237,7 @@ namespace EvaluacionEspecial {
 		}
 		int longitud = numero1->dimension();
 		int longitud2 = numero2->dimension();
-		numero3;
+		numero3 = numero1;
 		for (int i = longitud; i > 0; i--)
 		{
 			int valor1 = Convert::ToInt16(numero1->Ver(longitud));
@@ -291,7 +249,16 @@ namespace EvaluacionEspecial {
 
 				String^ tempt = numero1->Ver(longitud - 1);
 				int valortempt = Convert::ToInt16 (tempt);
-
+				tempt = Convert::ToString(valortemp[1]);
+				valortempt = valortempt + Convert::ToInt16(tempt);
+				tempt = Convert::ToString(valortempt);
+				numero1->reemplazar(tempt, longitud - 1);
+				tempt = Convert::ToString(valortemp[0]);
+				numero3->InsertarNuevo(tempt);
+			}
+			else
+			{
+				numero3->InsertarNuevo(valortemp);
 			}
 
 		}
@@ -302,21 +269,26 @@ namespace EvaluacionEspecial {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		int valorA = Convert::ToInt16(numericUpDownA->Text);
-		int valorB = Convert::ToInt16(numericUpDownB->Text);
-		int valorOpt = 1;
-		int valorC = 0;
-		bool completo = true;
-		while (completo)
+		int c1r1 = Convert::ToInt16(numericUpDownA->Text);
+		int c2r1 = c1r1;
+		int c1r2 = Convert::ToInt16(numericUpDownB->Text);
+		int c2r2 = 1;
+		int c1r3 = 0;
+		int c2r3 = 0;
+		while (c1r3 <= 0 && c1r2 != 1)
 		{
-			valorC = valorA - ((valorA / valorB) * valorB);
-			valorOpt = valorA - ((valorA / valorB) * valorOpt);
-			valorA = valorB
-			while ( valorC <= 0)
+			c1r3 = c1r1 - ((c1r1 / c1r2) * c1r2);
+			c2r3 = c1r1 - ((c1r1 / c2r2) * c2r2);
+			while (c2r3 < 0)
 			{
-				valorC + valorA;
+				c2r3 = c2r3 + c1r1;
 			}
+			c1r1 = c1r2;
+			c2r1 = c2r2;
+			c1r2 = c1r3;
+			c2r2 = c2r3;
 		}
+		label2->Text = "Resultado C1R3: " + c2r3;
 	}
 };
 }
